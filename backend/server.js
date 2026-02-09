@@ -6,16 +6,21 @@ const cors = require('cors')
 // or as an es module:
 // import { MongoClient } from 'mongodb'
 dotenv.config()
+// Add process.env.PORT to let Render decide the port
+const port = process.env.PORT || 3000;
+
+// Use process.env.MONGO_URI for the cloud database
+const url = process.env.MONGO_URI || 'mongodb://localhost:27017';
 
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+// const url = 'mongodb://localhost:27017';
 const client = new MongoClient(url);
 
 // Database Name
 const dbName = 'myProject';
 const app = express()
-const port = 3000
+// const port = 3000
 app.use(bodyparser.json())
 app.use(cors())
 
