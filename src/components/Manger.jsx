@@ -12,7 +12,8 @@ const Manger = () => {
     const [form, setform] = useState({ site: "", username: "", password: "" })
     const [passwordarray, setPasswordarray] = useState([])
     const getPasswords = async () => {
-        let req = await fetch("http://localhost:3000/")
+        // let req = await fetch("http://localhost:3000/")
+        let req = await fetch("https://your-app-name.onrender.com/")
         let passwords = await req.json()
         console.log(passwords)
         setPasswordarray(passwords)
