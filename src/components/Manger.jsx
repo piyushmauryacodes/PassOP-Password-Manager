@@ -13,7 +13,7 @@ const Manger = () => {
     const [passwordarray, setPasswordarray] = useState([])
     const getPasswords = async () => {
         // let req = await fetch("http://localhost:3000/")
-        let req = await fetch("https://your-app-name.onrender.com/")
+        let req = await fetch("https://passop-backend.onrender.com/")
         let passwords = await req.json()
         console.log(passwords)
         setPasswordarray(passwords)
